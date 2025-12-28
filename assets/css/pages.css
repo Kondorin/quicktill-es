@@ -7,11 +7,53 @@
 #card-box th, #card-box td:first-child{ width: 10px; }
 #card-box th, #card-box td:nth-child(2){ width: 150px; }
 
-#cartTable tbody { 
-  display: block; 
-  height: calc(100vh - 425px);
-  overflow: auto;
+#cartTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* columnas proporcionales */
 }
+
+#cartTable th, #cartTable td {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+/* Anchos proporcionales */
+#cartTable th:nth-child(1), #cartTable td:nth-child(1) { width: 5%; }
+#cartTable th:nth-child(2), #cartTable td:nth-child(2) { width: 50%; }
+#cartTable th:nth-child(3), #cartTable td:nth-child(3) { width: 15%; }
+#cartTable th:nth-child(4), #cartTable td:nth-child(4) { width: 10%; }
+#cartTable th:nth-child(5), #cartTable td:nth-child(5) { width: 15%; }
+#cartTable th:nth-child(6), #cartTable td:nth-child(6) { width: 5%; }
+
+/* Botones uniformes */
+#cartTable th button,
+#cartTable td button {
+    padding: 2px 5px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Imagen centrada */
+#cartTable td img {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: auto;
+}
+
+/* Cantidad centrada si usas contenedor */
+#cartTable td .quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 
 #parent { 
   display: block; 
