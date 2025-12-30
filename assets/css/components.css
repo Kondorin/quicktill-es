@@ -43,10 +43,10 @@
   margin-bottom: 5px !important;
 }
 .cart-image-wrapper{
-  border-radius: 50% !important;
-  width: 35px !important;
-  height: 35px !important;
-  margin-left: -20px !important;
+  border-radius: 25% !important;
+  width: 40px !important;
+  height: 40px !important;
+  /* margin-left: -20px !important; */
 }
 .cart-image{
   width: 100% !important;

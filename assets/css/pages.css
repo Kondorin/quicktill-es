@@ -3,84 +3,168 @@
   display: none;
 }
 
-#card-box tr {display: block; }
-#card-box th, #card-box td:first-child{ width: 10px; }
-#card-box th, #card-box td:nth-child(2){ width: 150px; }
+/* CONTENEDOR CATÁLOGO */
+.pos-catalog {
+    overflow: visible; /* 👈 deja ver botones */
+}
+
+.button-list {
+    overflow: visible !important;
+    white-space: normal;
+}
+
+
+/* =======================================  ==
+   TABLA CARRITO POS – 1024x768
+========================================= */
 
 #cartTable {
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    table-layout: fixed; /* columnas proporcionales */
 }
 
-#cartTable th, #cartTable td {
-    white-space: normal;
-    word-wrap: break-word;
-    overflow: hidden;
-    vertical-align: middle;
+#cartTable th,
+#cartTable td {
+    padding: 2px;
     text-align: center;
-    padding: 5px 10px;
-}
-
-/* Anchos proporcionales */
-#cartTable th:nth-child(1), #cartTable td:nth-child(1) { width: 5%; }
-#cartTable th:nth-child(2), #cartTable td:nth-child(2) { width: 50%; }
-#cartTable th:nth-child(3), #cartTable td:nth-child(3) { width: 15%; }
-#cartTable th:nth-child(4), #cartTable td:nth-child(4) { width: 10%; }
-#cartTable th:nth-child(5), #cartTable td:nth-child(5) { width: 15%; }
-#cartTable th:nth-child(6), #cartTable td:nth-child(6) { width: 5%; }
-
-/* Botones uniformes */
-#cartTable th button,
-#cartTable td button {
-    padding: 2px 5px;
+    vertical-align: middle;
     font-size: 14px;
-    line-height: 1;
 }
 
-/* Imagen centrada */
+/* # */
+#cartTable th:nth-child(1),
+#cartTable td:nth-child(1) { width: 5%; }
+
+/* ARTÍCULO */
+#cartTable th:nth-child(2),
+#cartTable td:nth-child(2) {
+    width: 38%;
+    text-align: left;
+}
+
+/* IMAGEN */
+#cartTable th:nth-child(3),
+#cartTable td:nth-child(3) { width: 12%; }
+
 #cartTable td img {
+    width: 40px;
     display: block;
     margin: 0 auto;
-    width: 40px;
-    height: auto;
 }
 
-/* Cantidad centrada si usas contenedor */
-#cartTable td .quantity-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+/* CANTIDAD */
+#cartTable th:nth-child(4),
+#cartTable td:nth-child(4) {
+    width: 20%;
+    white-space: nowrap;
+}
+
+#cartTable td:nth-child(4) button {
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+#cartTable td:nth-child(4) input {
+    width: 36px;
+    text-align: center;
+}
+
+/* PRECIO */
+#cartTable th:nth-child(5),
+#cartTable td:nth-child(5) { width: 15%; }
+
+/* BOTÓN */
+#cartTable th:nth-child(6),
+#cartTable td:nth-child(6) { width: 5%; }
+
+/* =========================================
+   CATÁLOGO POS – FIX DEFINITIVO
+========================================= */
+
+/* contenedor grid (SIN .row) */
+#parent {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 0px;
+    max-height: 480px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 🚨 ANULAR BOOTSTRAP DENTRO DEL GRID */
+#parent > * {
+    float: none !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* tarjeta producto */
+#parent > div {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 0px;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* imagen */
+#parent img {
+    /* width: 60px; */
+    height: 60px;
+    object-fit: contain;
+    /* display: block; */
+    margin: 3px auto;
+}
+
+/* texto */
+#parent h5,
+#parent p,
+#parent .product-name {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* precio */
+#parent .price {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+/* stock */
+#parent .stock {
+    font-size: 11px;
+    color: #888;
+}
+
+/* =========================================
+   AJUSTE 1024x768
+========================================= */
+
+@media (max-width: 1024px) {
+    body { font-size: 13px; }
+    .card-box { padding: 8px; }
 }
 
 
-#parent { 
-  display: block; 
-  height: calc(100vh - 215px);
-  overflow: auto;
-  overflow: hidden;
-}
 
-
-.order-box{
-background-color: grey;
-color: #FFFFFF;
-}
-
-#parent .box {
-  margin-bottom: 10px;
-  text-align: center;
-  display: block;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
+.order-box {
+    background-color: grey;
+    color: #fff;
 }
 
 #product_img {
-  max-height: 80px;
-  border-radius: 50%;
-  max-width: 100px;
+    max-height: 80px;
+    max-width: 100px;
+    border-radius: 25%;
 }
+
 
 #reportrange {
   background: #fff; 
@@ -95,7 +179,7 @@ color: #FFFFFF;
 .nobr  { white-space: nowrap;}
 
 #image {
-  height: 80px;
+  height: 65px;
 }
 
 #print_list {

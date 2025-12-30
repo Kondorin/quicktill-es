@@ -917,7 +917,7 @@ textarea.form-control {
   border-color: #DDDDDD;
   border-radius: 2px;
   box-shadow: none;
-  padding: 25px;
+  padding: 5px;
 }
 .modal .modal-dialog .modal-content .modal-header {
   border-bottom-width: 2px;
@@ -926,7 +926,7 @@ textarea.form-control {
   padding-bottom: 15px;
 }
 .modal .modal-dialog .modal-content .modal-body {
-  padding: 20px 0;
+  padding: 5px 0;
 }
 .modal .modal-dialog .modal-content .modal-footer {
   padding: 0;
