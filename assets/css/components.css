@@ -51,6 +51,12 @@
 .cart-image{
   width: 100% !important;
 }
+
+.cart-image-wrapper img {
+    height: 40px !important;
+    object-fit: contain;
+}
+
 .cart-quantity-form{
   width: 23px !important;
 }
@@ -139,6 +145,7 @@
 .open > .dropdown-toggle.btn-default {
   background-color: #5fbeaa !important;
   border: 1px solid #5fbeaa !important;
+  font-size: 25px;
 }
 .btn-white,
 .btn-white:hover,
@@ -202,6 +209,7 @@
 .open > .dropdown-toggle.btn-primary {
   background-color: #5d9cec !important;
   border: 1px solid #5d9cec !important;
+  font-size: 25px;
 }
 .btn-success,
 .btn-success:hover,
@@ -215,6 +223,7 @@
 .open > .dropdown-toggle.btn-success {
   background-color: #81c868 !important;
   border: 1px solid #81c868 !important;
+  font-size: 25px;
 }
 .btn-info,
 .btn-info:hover,
@@ -228,6 +237,7 @@
 .open > .dropdown-toggle.btn-info {
   background-color: #34d3eb !important;
   border: 1px solid #34d3eb !important;
+  font-size: 25px;
 }
 .btn-warning,
 .btn-warning:hover,
@@ -254,6 +264,7 @@
 .open > .dropdown-toggle.btn-danger {
   background-color: #f05050 !important;
   border: 1px solid #f05050 !important;
+  font-size: 25px;
 }
 .btn-inverse,
 .btn-inverse:hover,

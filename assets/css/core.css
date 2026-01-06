@@ -521,7 +521,7 @@ a:focus {
   color: #f05050;
 }
 .text-muted {
-  color: #98a6ad;
+  color: black;
 }
 .text-primary {
   color: #5d9cec;
@@ -531,6 +531,7 @@ a:focus {
 }
 .text-success {
   color: #81c868;
+  font-size: 20px;
 }
 .text-info {
   color: #34d3eb;

@@ -503,7 +503,7 @@ if (auth == undefined) {
 
       // $("#gross_price").text(settings.symbol + grossTotal.toFixed(2));
       $("#gross_price").html(
-        `<span style="font-weight: 800; color: #F2B600;">${settings.symbol} ${grossTotal.toFixed(2)}</span>`
+        `<span style="font-weight: 800; font-size: 40px; color: #F2B600;">${settings.symbol} ${grossTotal.toFixed(2)}</span>`
       );
       $("#payablePrice").val(grossTotal);
     };
